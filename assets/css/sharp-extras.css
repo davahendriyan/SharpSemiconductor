@@ -50,7 +50,6 @@ main p, .lead, .lead-text, .section-description{font-weight:400 !important}
 /* teks rata kiri-kanan (justify): Tentang Kami dan jawaban FAQ */
 .about .content p, .faq .faq-content p, .hero .content p, .skills .skill-description, .services .service-card p, .services p{text-align:justify}
 
-
 /* ===== REVISI TAMPILAN (taruh di paling bawah file) ===== */
 
 /* 1. Tombol panah "kembali ke atas" dihapus di semua halaman */
@@ -90,13 +89,11 @@ section,.section{padding:30px 0}
   .featured-services h3,.services h3{min-height:0}
 }
 
-/* 4. Kontak dan peta dibuat selebar sama (kiri-kanan sejajar) */
-.contact .col-lg-6.mx-auto{flex:0 0 100%;max-width:100%;width:100%}
-.contact .contact-sidebar{border-radius:20px;padding:40px}
-.contact .contact-sidebar .contact-header{margin-bottom:30px}
-.contact .contact-sidebar .contact-methods{margin-bottom:30px}
-@media(min-width:992px){
-  .contact .contact-sidebar .contact-methods{display:grid;grid-template-columns:1fr 1fr;gap:28px 40px}
-  .contact .contact-sidebar .contact-method{margin-bottom:0}
-}
-.sx-map{margin-top:30px}
+/* 4. Peta (kiri) dan kontak (kanan) bersebelahan */
+.contact .contact-sidebar{border-radius:20px;padding:36px;height:100%}
+.contact .contact-sidebar .contact-header{margin-bottom:24px}
+.contact .contact-sidebar .contact-methods{margin-bottom:24px}
+.contact .contact-sidebar .contact-method{margin-bottom:24px}
+.contact .contact-sidebar .contact-method:last-child{margin-bottom:0}
+.sx-map{margin-top:0;height:100%;min-height:420px}
+.sx-map iframe{height:100%;min-height:420px}
