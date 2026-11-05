@@ -49,3 +49,54 @@ main p, .lead, .lead-text, .section-description{font-weight:400 !important}
 
 /* teks rata kiri-kanan (justify): Tentang Kami dan jawaban FAQ */
 .about .content p, .faq .faq-content p, .hero .content p, .skills .skill-description, .services .service-card p, .services p{text-align:justify}
+
+
+/* ===== REVISI TAMPILAN (taruh di paling bawah file) ===== */
+
+/* 1. Tombol panah "kembali ke atas" dihapus di semua halaman */
+.scroll-top{display:none !important}
+
+/* 2. Spasi kosong antar bagian dirapatkan (berlaku di semua halaman) */
+section,.section{padding:30px 0}
+.section-title{padding-bottom:30px}
+.services{padding:30px 0}
+.service-details{padding:30px 0}
+.about .content h2{margin-bottom:16px}
+.about .content .lead{margin-bottom:20px}
+.about .content .description{margin-bottom:24px}
+.about .content .description p{margin-bottom:12px}
+.about .content .stats-row{margin-bottom:24px}
+.skills .intro-content{margin-bottom:30px}
+.skills .skills-grid{margin-bottom:30px}
+.skills .certification-area{padding-top:30px}
+.portfolio .portfolio-filters-wrapper{margin-bottom:30px}
+.stats .row.mb-5,.skills .intro-content.mb-5{margin-bottom:30px !important}
+
+/* 3. Kartu produk (LED, Opto, Dioda Laser, Regulator) dan kartu Sistem Produksi:
+      judul sama tinggi, paragraf rata kanan-kiri, link/tombol sejajar di bawah */
+.featured-services .service-item,
+.services .service-item{display:flex;flex-direction:column}
+.featured-services .service-item{padding:40px 26px}
+.services .service-item{padding:40px 28px}
+.featured-services h3,
+.services h3{display:flex;align-items:center;min-height:2.6em;margin-bottom:16px}
+.featured-services h3{justify-content:center;font-size:22px}
+.featured-services p,
+.services p{flex:1 1 auto;text-align:justify;text-justify:inter-word;hyphens:auto;-webkit-hyphens:auto;margin-bottom:20px}
+.featured-services .service-link,
+.services .service-link{margin-top:auto}
+.services .service-icon,.featured-services .service-icon{margin-bottom:24px}
+@media(max-width:991px){
+  .featured-services h3,.services h3{min-height:0}
+}
+
+/* 4. Kontak dan peta dibuat selebar sama (kiri-kanan sejajar) */
+.contact .col-lg-6.mx-auto{flex:0 0 100%;max-width:100%;width:100%}
+.contact .contact-sidebar{border-radius:20px;padding:40px}
+.contact .contact-sidebar .contact-header{margin-bottom:30px}
+.contact .contact-sidebar .contact-methods{margin-bottom:30px}
+@media(min-width:992px){
+  .contact .contact-sidebar .contact-methods{display:grid;grid-template-columns:1fr 1fr;gap:28px 40px}
+  .contact .contact-sidebar .contact-method{margin-bottom:0}
+}
+.sx-map{margin-top:30px}
