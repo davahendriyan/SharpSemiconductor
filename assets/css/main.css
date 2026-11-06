@@ -4872,7 +4872,15 @@ section,
 .starter-section {
   /* Add your styles here */
 }
-.gnext, 
-.gprev {
+
+.gnext,
+.gprev,
+.gslide-next,
+.gslide-prev,
+button.gnext,
+button.gprev {
   display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
 }
