@@ -4884,3 +4884,11 @@ button.gprev {
   visibility: hidden !important;
   pointer-events: none !important;
 }
+/* Membuat seluruh foto galeri tampil utuh tanpa terpotong */
+.portfolio-item img,
+.portfolio .portfolio-item img,
+#portfolio img,
+.gallery-item img {
+  object-fit: contain !important;
+  height: auto !important;
+}
