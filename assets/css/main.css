@@ -4872,3 +4872,7 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+.gnext, 
+.gprev {
+  display: none !important;
+}
