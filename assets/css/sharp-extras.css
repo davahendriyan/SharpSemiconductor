@@ -18,10 +18,30 @@
 .org-node.pd b,.org-node.pd small{color:#fff}
 .org-v{width:2px;height:28px;background:var(--accent-color)}
 .org-groups{display:grid;grid-template-columns:3fr 2fr;gap:26px;width:100%;position:relative;padding-top:28px}
-.org-groups::before{content:"";position:absolute;top:0;left:calc(30% + 13px);right:calc(20% + 45px);height:2px;background:var(--accent-color)}
+.org-groups::before{display:none !important}
 .org-group{position:relative;background:var(--background-color);border:1px dashed color-mix(in srgb,var(--accent-color),transparent 55%);border-radius:22px;padding:0 16px 16px}
 .light-background .org-group,.team .org-group{background:color-mix(in srgb,var(--accent-color),transparent 94%)}
 .org-group::before{content:"";position:absolute;top:-28px;left:50%;width:2px;height:28px;background:var(--accent-color)}
+
+/* Garis horizontal presisi dari titik tengah grup kiri ke grup kanan */
+.org-group:first-child::after {
+  content: "";
+  position: absolute;
+  top: -28px;
+  left: 50%;
+  right: -26px;
+  height: 2px;
+  background: var(--accent-color);
+}
+.org-group:last-child::after {
+  content: "";
+  position: absolute;
+  top: -28px;
+  left: -26px;
+  right: 50%;
+  height: 2px;
+  background: var(--accent-color);
+}
 .org-gh{display:inline-flex;gap:8px;align-items:center;background:var(--heading-color);color:#fff;font:600 13px var(--default-font);letter-spacing:.08em;text-transform:uppercase;padding:8px 20px;border-radius:30px;position:relative;top:-17px;left:50%;transform:translateX(-50%);white-space:nowrap}
 .org-cols{display:grid;gap:14px;margin-top:-4px}
 .org-cols.c3{grid-template-columns:repeat(3,1fr)}.org-cols.c2{grid-template-columns:repeat(2,1fr)}
