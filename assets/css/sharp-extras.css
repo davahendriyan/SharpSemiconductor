@@ -118,38 +118,55 @@ section,.section{padding:30px 0}
 .sx-map{margin-top:0;height:100%;min-height:420px}
 .sx-map iframe{height:100%;min-height:420px}
 
-/* Merapatkan jarak antarpertanyaan Visi & Misi (FAQ) */
-.faq .faq-item {
-  margin-bottom: 10px !important;
-  padding: 12px 0 !important;
-}
-.faq .faq-header h4 {
+/* ===== MODIFIKASI FAQ (VISI & MISI) MEPET SAAT TERTUTUP & MEKAR SAAT DIKLIK ===== */
+.faq .faq-wrapper {
   margin: 0 !important;
-}
-/* Merapatkan total ruang atas-bawah seluruh section FAQ */
-.faq.section {
-  padding: 20px 0 !important;
+  padding: 0 !important;
 }
 
-/* Memangkas jarak vertikal antar item pertanyaan */
+/* Kondisi dasar item FAQ saat tertutup (mepet) */
 .faq .faq-item {
-  margin-bottom: 0 !important;
-  padding: 8px 0 !important;
-  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+  margin: 0 !important;
+  padding: 12px 0 !important;
+  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 85%) !important;
+  transition: padding 0.3s ease, margin 0.3s ease !important;
 }
 
 .faq .faq-item:last-child {
-  border-bottom: none;
+  border-bottom: none !important;
 }
 
-/* Merapatkan ruang di dalam baris judul pertanyaan */
+/* Header (Baris Pertanyaan) */
 .faq .faq-header {
-  padding: 6px 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
   min-height: auto !important;
+  display: flex !important;
+  align-items: center !important;
 }
 
 .faq .faq-header h4 {
   margin: 0 !important;
   padding: 0 !important;
-  line-height: 1.3 !important;
+  line-height: 1.4 !important;
+}
+
+/* Sembunyikan container jawaban saat tertutup */
+.faq .faq-item:not(.faq-active) .faq-content {
+  margin: 0 !important;
+  padding: 0 !important;
+  max-height: 0 !important;
+  overflow: hidden !important;
+}
+
+/* Saat diklik / aktif (.faq-active): Jawaban mekar & memberi ruang ke bawah */
+.faq .faq-item.faq-active {
+  padding: 18px 0 22px 0 !important;
+}
+
+.faq .faq-item.faq-active .faq-content {
+  margin-top: 14px !important;
+  padding-top: 0 !important;
+  max-height: 500px !important;
+  transition: max-height 0.4s ease, margin-top 0.3s ease !important;
 }
