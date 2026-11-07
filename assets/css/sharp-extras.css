@@ -117,3 +117,12 @@ section,.section{padding:30px 0}
 .contact .contact-sidebar .contact-method:last-child{margin-bottom:0}
 .sx-map{margin-top:0;height:100%;min-height:420px}
 .sx-map iframe{height:100%;min-height:420px}
+
+/* Merapatkan jarak antarpertanyaan Visi & Misi (FAQ) */
+.faq .faq-item {
+  margin-bottom: 10px !important;
+  padding: 12px 0 !important;
+}
+.faq .faq-header h4 {
+  margin: 0 !important;
+}
