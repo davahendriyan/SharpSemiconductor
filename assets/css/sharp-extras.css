@@ -175,7 +175,7 @@ section,.section{padding:30px 0}
 #portfolio .portfolio-card .image-container{
   position:relative !important;
   height:0 !important;
-  padding-bottom:100% !important;   /* kotak persegi; ganti 75% untuk rasio 4:3 */
+  padding-bottom:125% !important;   /* kotak 4:5 (agak tinggi) supaya foto portrait tampil penuh; 100% = persegi, 75% = 4:3 */
   aspect-ratio:auto !important;
   overflow:hidden !important;
   background:#f1f1f1 !important;
