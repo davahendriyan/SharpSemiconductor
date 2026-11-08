@@ -172,15 +172,23 @@ section,.section{padding:30px 0}
 }
 
 /* ===== GALERI K3: semua kotak sama ukuran, foto tidak terpotong ===== */
-.portfolio .portfolio-card .image-container{
-  aspect-ratio:1/1 !important;
+#portfolio .portfolio-card .image-container{
+  position:relative !important;
+  height:0 !important;
+  padding-bottom:100% !important;   /* kotak persegi; ganti 75% untuk rasio 4:3 */
+  aspect-ratio:auto !important;
+  overflow:hidden !important;
   background:#f1f1f1 !important;
 }
-.portfolio .portfolio-card .image-container img{
+#portfolio .portfolio-card .image-container img{
+  position:absolute !important;
+  top:0 !important; left:0 !important;
   width:100% !important;
   height:100% !important;
+  max-width:100% !important;
   object-fit:contain !important;
+  object-position:center !important;
 }
-.portfolio .portfolio-card:hover .image-container img{
+#portfolio .portfolio-card:hover .image-container img{
   transform:none !important;
 }
